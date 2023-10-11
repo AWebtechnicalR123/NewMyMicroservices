@@ -18,7 +18,7 @@ import com.cgi.user.entities.User;
 import com.cgi.user.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+//@RequestMapping("/users")
 public class UserController {
 	@Autowired
 	private UserService userService;
@@ -39,9 +39,10 @@ public class UserController {
 	
 	//all user get
 	@GetMapping("/get")
-	public ResponseEntity<List<User>> getAllUser(){
-		List<User> allUser = userService.getAllUser();
-		return ResponseEntity.ok(allUser);
+	public List<User> getAllUser(){
+//		List<User> allUser = userService.getAllUser();
+//		return ResponseEntity.ok(allUser);
+		return userService.getAllUser();
 	}
 	
 	//delete single user

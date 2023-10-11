@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="micr_user") //to change table name
+@Table(name="user") //to change table name
 public class User {
 	@Id
 	@Column(name="id") //change column name
