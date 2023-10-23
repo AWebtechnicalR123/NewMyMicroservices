@@ -16,13 +16,11 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User saveUser(User user) {
-		// TODO Auto-generated method stub
 		return userRepository.save(user);
 	}
 
 	@Override
 	public List<User> getAllUser() {
-		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
 
@@ -40,8 +38,8 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public User updateUserId(String userId, User user) {
 		User user1 = userRepository.findById(userId).get();
-//		user1.setName(user.getName());
-		return user1;
+		user1.setName(user.getName());
+		return userRepository.save(user1);
 	}
 	
 }
