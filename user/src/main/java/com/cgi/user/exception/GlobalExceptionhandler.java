@@ -12,9 +12,9 @@ import com.cgi.user.payload.ApiResponse;
 public class GlobalExceptionhandler {
 	//response Entity sendind data and code called response Status code
 	@ExceptionHandler
-	public ResponseEntity<ApiResponse> handlUserNotFoundException(UserNotFoundException ex){
+	public ResponseEntity<ApiResponse> handlerUserNotFoundException(UserNotFoundException ex){
 		String message = ex.getMessage();
-		ApiResponse reponse = ApiResponse.builder().message(message).success(true).status(HttpStatus.NOT_FOUND);
+		ApiResponse reponse = ApiResponse.builder().message(message).success(true).status(HttpStatus.NOT_FOUND).build(); //builder is building object of a ApiResponse class
 		return new ResponseEntity<ApiResponse>(reponse, HttpStatus.NOT_FOUND);
 	}
 
