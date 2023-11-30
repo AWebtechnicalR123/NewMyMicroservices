@@ -24,4 +24,5 @@ public class RatingServiceImpl implements RatingService{
 		return ratingRepository.findAll();
 	}
 	
+	
 }
